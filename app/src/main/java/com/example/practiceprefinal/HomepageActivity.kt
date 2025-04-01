@@ -16,6 +16,7 @@ class HomepageActivity : Activity() {
         val logoutButton = findViewById<Button>(R.id.logout)
         val listViewButton = findViewById<Button>(R.id.list_view)
         val customViewButton = findViewById<Button>(R.id.custom_listView)
+        val recyclerViewButton = findViewById<Button>(R.id.recycler_listView)
 
         profileButton.setOnClickListener {
             startActivity(Intent(this, ProfileActivity::class.java))
@@ -35,6 +36,10 @@ class HomepageActivity : Activity() {
 
         customViewButton.setOnClickListener {
             startActivity(Intent(this, CustomListView::class.java))
+        }
+
+        recyclerViewButton.setOnClickListener {
+            startActivity(Intent(this, RecyclerActivity::class.java))
         }
 
         logoutButton.setOnClickListener {

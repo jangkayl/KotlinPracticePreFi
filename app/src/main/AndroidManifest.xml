@@ -41,6 +41,9 @@
         <activity
             android:name=".CustomListView"
             android:exported="false"/>
+        <activity
+            android:name=".RecyclerActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>

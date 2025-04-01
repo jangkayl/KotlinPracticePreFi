@@ -27,7 +27,7 @@ class MyApplication : Application() {
 
         fun setCustomStudents(students: List<Student>){
             with(sharedPreferences.edit()){
-                putStringSet(CUSTOM_STUDENTS, students.map { "${it.id}, ${it.name}, ${it.email}, ${it.grade}" }.toSet())
+                putStringSet(CUSTOM_STUDENTS, students.map { "${it.id},${it.name},${it.email},${it.grade}" }.toSet())
                 apply()
             }
         }
