@@ -26,15 +26,7 @@ class RecyclerActivity : Activity() {
         addButton.setOnClickListener { showAddDialog() }
 
         val recycler = findViewById<RecyclerView>(R.id.recyclerview)
-        adapter = RecyclerAdapter(students, object : RecyclerAdapter.OnStudentActionListener {
-            override fun onEdit(position: Int) {
-                showEditDialog(position)
-            }
-
-            override fun onDelete(position: Int) {
-                showDeleteDialog(position)
-            }
-        })
+        adapter = RecyclerAdapter(students)
 
         recycler.layoutManager = LinearLayoutManager(this)
         recycler.adapter = adapter

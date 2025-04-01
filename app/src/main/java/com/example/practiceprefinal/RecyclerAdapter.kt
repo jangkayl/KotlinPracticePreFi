@@ -6,32 +6,15 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-internal class RecyclerAdapter(
-    private val students: List<Student>,
-    private val listener: OnStudentActionListener
+class RecyclerAdapter(
+    private var students: MutableList<Student>
 ) : RecyclerView.Adapter<RecyclerAdapter.ItemViewHolder>() {
 
-    interface OnStudentActionListener {
-        fun onEdit(position: Int)
-        fun onDelete(position: Int)
-    }
-
-    internal inner class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class ItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val id: TextView = view.findViewById(R.id.student_id)
         val name: TextView = view.findViewById(R.id.student_name)
         val email: TextView = view.findViewById(R.id.student_email)
         val grade: TextView = view.findViewById(R.id.student_grade)
-
-        init {
-            view.setOnClickListener {
-                listener.onEdit(adapterPosition)
-            }
-
-            view.setOnLongClickListener {
-                listener.onDelete(adapterPosition)
-                true
-            }
-        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
@@ -45,6 +28,12 @@ internal class RecyclerAdapter(
         holder.id.text = String.format(student.id.toString())
         holder.email.text = student.email
         holder.grade.text = String.format(student.grade.toString())
+
+        holder.itemView.setOnLongClickListener {
+            students.removeAt(position)
+            notifyItemRemoved(position)
+            true
+        }
     }
 
     override fun getItemCount(): Int = students.size
