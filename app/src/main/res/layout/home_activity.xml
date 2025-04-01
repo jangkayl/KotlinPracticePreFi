@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_border"
+        android:padding="30dp"
+        android:elevation="10dp"
+        android:orientation="vertical"
+        android:backgroundTint="#DBCECE">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:layout_marginBottom="20dp"
+            android:text="HOMEPAGE"/>
+        <Button
+            android:id="@+id/seeProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_border"
+            android:backgroundTint="#6D5A5A"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="SEE PROFILE"/>
+        <Button
+            android:id="@+id/editProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_border"
+            android:backgroundTint="#6D5A5A"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="EDIT PROFILE"/>
+        <Button
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_border"
+            android:backgroundTint="#6D5A5A"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="LISTVIEW STUDENT"/>
+        <Button
+            android:id="@+id/custom_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_border"
+            android:backgroundTint="#6D5A5A"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="CUSTOM LISTVIEW STUDENT"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_border"
+            android:backgroundTint="#6D5A5A"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="RECYCLERVIEW STUDENT"/>
+        <Button
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_border"
+            android:backgroundTint="#971212"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="LOGOUT"/>
+    </LinearLayout>
+</LinearLayout>
