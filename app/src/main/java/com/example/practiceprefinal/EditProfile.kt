@@ -60,6 +60,5 @@ class EditProfile : Activity() {
             Toast.makeText(this, "Changes saved successfully", Toast.LENGTH_LONG).show()
             finish()
         }
-
     }
 }
