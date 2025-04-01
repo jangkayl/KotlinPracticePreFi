@@ -91,12 +91,14 @@ class MyApplication : Application() {
             val username = getUsername()
             val password = getPassword()
             val students = getSimpleStudents()
+            val customStudents = getCustomStudents()
 
             with(sharedPreferences.edit()){
                 clear()
                 username?.let { putString("username", it)}
                 password?.let { putString("password", it)}
                 putStringSet(SIMPLE_STUDENTS, students.toMutableSet())
+                putStringSet(CUSTOM_STUDENTS, customStudents.map { "${it.id},${it.name},${it.email},${it.grade}" }.toSet())
                 putBoolean("isLoggedIn", false)
                 apply()
             }

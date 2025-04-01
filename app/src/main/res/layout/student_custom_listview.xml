@@ -18,7 +18,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:padding="20dp"
-            android:text="Student Simple ListView"/>
+            android:text="Student Custom ListView"/>
         <ListView
             android:id="@+id/listview"
             android:layout_width="match_parent"
